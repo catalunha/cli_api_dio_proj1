@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:cli_api_dio_proj1/datasource/datasource.dart';
 import 'package:dio/dio.dart';
 import '../models/info_model.dart';
