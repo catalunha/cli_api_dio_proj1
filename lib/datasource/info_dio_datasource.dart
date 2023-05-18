@@ -2,7 +2,7 @@ import 'package:cli_api_dio_proj1/datasource/datasource.dart';
 import 'package:dio/dio.dart';
 import '../models/info_model.dart';
 
-class InfoDio extends DataSource {
+class InfoDioDataSource extends DataSource {
   @override
   Future<List<InfoModel>> get() async {
     try {
