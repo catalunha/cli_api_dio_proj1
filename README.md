@@ -1,5 +1,7 @@
-# Diary
-catalunha@pop-os:~/apps/cli_api_dio_proj1/api$ jrs run
-catalunha@pop-os:~/apps/cli_api_dio_proj1$ dart ./bin/cli_api_dio_proj1.dart -h
-catalunha@pop-os:~/apps/cli_api_dio_proj1$ dart ./bin/cli_api_dio_proj1.dart infos -h
-catalunha@pop-os:~/apps/cli_api_dio_proj1$ dart ./bin/cli_api_dio_proj1.dart infos get
+# Sobre
+
+Este projeto implementa uma pequena CLI em Dart para consumir uma API via json_rest_server usando dio
+
+Comandos básicos:
+.../app/api$ jrs run
+.../app$ dart ./bin/cli_api_dio_proj1.dart -h
