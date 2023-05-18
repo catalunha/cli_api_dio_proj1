@@ -1,0 +1,24 @@
+{
+    "typeString": "b",
+    "typeInt": 1,
+    "typeDouble": 1.1,
+    "typeBool": true,
+    "typeOther": {
+        "id": "o1",
+        "typeString": "oa"
+    },
+    "typeListString": [
+        "aA",
+        "aAa"
+    ],
+    "typeListOther": [
+        {
+            "id": "o2",
+            "typeString": "ob"
+        },
+        {
+            "id": "o3",
+            "typeString": "oc"
+        }
+    ]
+}
