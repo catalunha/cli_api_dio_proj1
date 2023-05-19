@@ -11,7 +11,7 @@ class InfosPostSubcommand extends Command {
     required this.repository,
   }) {
     argParser.addOption('file',
-        abbr: 'f', help: 'Path for the csv file with Info data');
+        abbr: 'f', help: 'Path for the json file with Info data');
   }
 
   @override

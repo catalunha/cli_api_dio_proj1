@@ -37,7 +37,28 @@ class InfoDioDataSource extends DataSource {
   @override
   Future<void> post(InfoModel model) async {
     try {
-      Dio().post('http://localhost:8080/infos', data: model.toMap());
+      await Dio().post('http://localhost:8080/infos', data: model.toMap());
+    } on DioError catch (e) {
+      print(e);
+      throw Exception();
+    }
+  }
+
+  @override
+  Future<void> postFile(String filePath, String fileName) async {
+    final FormData formData = FormData.fromMap(
+      {
+        'file': await MultipartFile.fromFile(
+          filePath,
+          // filename: fileName,
+        )
+      },
+    );
+    print('$filePath - $fileName');
+    try {
+      final response =
+          await Dio().post('http://localhost:8080/uploads', data: formData);
+      print(response.data.toString());
     } on DioError catch (e) {
       print(e);
       throw Exception();
@@ -47,7 +68,7 @@ class InfoDioDataSource extends DataSource {
   @override
   Future<void> put(String id, InfoModel model) async {
     try {
-      Dio().put('http://localhost:8080/infos/$id', data: model.toMap());
+      await Dio().put('http://localhost:8080/infos/$id', data: model.toMap());
     } on DioError catch (e) {
       print(e);
       throw Exception();
@@ -57,7 +78,7 @@ class InfoDioDataSource extends DataSource {
   @override
   Future<void> patch(String id, Map<String, dynamic> map) async {
     try {
-      Dio().patch('http://localhost:8080/infos/$id', data: map);
+      await Dio().patch('http://localhost:8080/infos/$id', data: map);
     } on DioError catch (e) {
       print(e);
       throw Exception();
@@ -67,7 +88,7 @@ class InfoDioDataSource extends DataSource {
   @override
   Future<void> delete(String id) async {
     try {
-      Dio().delete('http://localhost:8080/infos/$id');
+      await Dio().delete('http://localhost:8080/infos/$id');
     } on DioError catch (e) {
       print(e);
       throw Exception();

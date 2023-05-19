@@ -17,6 +17,9 @@ class InfoRepository extends Repository {
   @override
   Future<void> post(InfoModel model) => dataSource.post(model);
   @override
+  Future<void> postFile(String filePath, String fileName) =>
+      dataSource.postFile(filePath, fileName);
+  @override
   Future<void> put(String id, InfoModel model) => dataSource.put(id, model);
   @override
   Future<void> patch(String id, map) => dataSource.patch(id, map);

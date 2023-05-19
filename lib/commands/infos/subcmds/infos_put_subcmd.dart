@@ -13,7 +13,7 @@ class InfosPutSubcommand extends Command {
     argParser.addOption('id',
         abbr: 'i', help: 'Informe o Id da info a ser atualizada');
     argParser.addOption('file',
-        abbr: 'f', help: 'Path for the csv file with Info data');
+        abbr: 'f', help: 'Path for the json file with Info data');
   }
 
   @override
